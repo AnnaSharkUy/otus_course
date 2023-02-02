@@ -6,9 +6,17 @@ from src.Square import Square
 from src.Triangle import Triangle
 
 
+def test_square_name():
+    assert Square(1).name == "Square"
+
+
 def test_square_invalid_arguments():
     with pytest.raises(ValueError):
         Square(0)
+
+
+def test_square_area():
+    assert Square(4).area == 16
 
 
 def test_square_add_area():
@@ -28,3 +36,7 @@ def test_square_add_area_argument_notafigure():
     with pytest.raises(ValueError):
         Square(1).add_area("not a figure")
 
+
+def test_square_add_area_argument_none():
+    with pytest.raises(ValueError):
+        Square(1).add_area(None)

@@ -1,4 +1,5 @@
 import pytest
+import math
 
 from src.Circle import Circle
 from src.Rectangle import Rectangle
@@ -6,9 +7,17 @@ from src.Square import Square
 from src.Triangle import Triangle
 
 
+def test_circle_name():
+    assert Circle(1).name == "Circle"
+
+
 def test_circle_invalid_arguments():
     with pytest.raises(ValueError):
         Circle(0)
+
+
+def test_circle_area():
+    assert Circle(1).area == math.pi
 
 
 def test_circle_add_area():
@@ -27,3 +36,8 @@ def test_circle_add_area():
 def test_circle_add_area_argument_notafigure():
     with pytest.raises(ValueError):
         Circle(1).add_area("not a figure")
+
+
+def test_circle_add_area_argument_none():
+    with pytest.raises(ValueError):
+        Circle(1).add_area(None)

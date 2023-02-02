@@ -6,9 +6,18 @@ from src.Square import Square
 from src.Triangle import Triangle
 
 
+def test_triangle_name():
+    assert Triangle(2, 3, 4).name == "Triangle"
+
+
 def test_triangle_invalid_arguments():
     with pytest.raises(ValueError):
         Triangle(2, 3, 5)
+
+
+def test_triangle_area():
+    triangle = Triangle(5, 3, 4)
+    assert triangle.area == 6
 
 
 def test_triangle_add_area():
@@ -28,3 +37,7 @@ def test_triangle_add_area_argument_notafigure():
     with pytest.raises(ValueError):
         Triangle(2, 3, 4).add_area("not a figure")
 
+
+def test_triangle_add_area_argument_none():
+    with pytest.raises(ValueError):
+        Triangle(2, 3, 4).add_area(None)
