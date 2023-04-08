@@ -1,0 +1,18 @@
+Отчёт о состоянии системы:
+Пользователи системы: ['root', 'systemd+', 'message+', 'avahi', 'syslog', '_chrony', 'colord', 'rtkit', 'shark', 'lp']
+Процессов запущено: 360
+Пользовательских процессов:
+root: 195
+systemd+: 1
+message+: 2
+avahi: 2
+syslog: 1
+_chrony: 2
+colord: 1
+rtkit: 1
+shark: 154
+lp: 1
+Всего памяти используется: 63.8%
+Всего CPU используется: 82.1%
+Больше всего памяти использует: (9.6%, /opt/pycharm-communi)
+Больше всего CPU использует: (56.2%, /opt/pycharm-communi)
